@@ -47,7 +47,6 @@ public class zadanie3 {
 				System.out.println();
 			}
 		}
-		
 		scanner.close();
 		if(koniec == 2)
 		{
