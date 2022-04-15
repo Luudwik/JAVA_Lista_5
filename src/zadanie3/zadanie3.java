@@ -13,7 +13,6 @@ public class zadanie3 {
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Date> listaDat = new ArrayList<Date>();
 		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-				
 		int koniec = 1;
 		
 		while(koniec != 2)
@@ -33,7 +32,7 @@ public class zadanie3 {
 				Collections.sort(listaDat);
 				wypisz(listaDat, format);
 			}
-			if(listaDat.size()==4)
+			if(listaDat.size() == 4)
 			{
 				System.out.println("Lista jest ju¿ pe³na");
 				koniec = 2;
@@ -48,7 +47,6 @@ public class zadanie3 {
 				System.out.println();
 			}
 		}
-		
 		scanner.close();
 		if(koniec == 2)
 		{
