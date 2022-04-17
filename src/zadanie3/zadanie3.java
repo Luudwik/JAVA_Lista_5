@@ -15,16 +15,16 @@ public class zadanie3 {
 		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 		int koniec = 1;
 		
-		while(koniec != 2)
+		while(koniec!=2)
 		{
-			System.out.print("Podaj datê: ");
+			System.out.print("Podaj datÃª: ");
 			String input = scanner.next();
 			System.out.println();
 			Date data = format.parse(input);
 			
 			if(listaDat.contains(data))
 			{
-				System.out.println("Podana data jest ju¿ na liœcie" + "\n");
+				System.out.println("Podana data jest juÂ¿ na liÅ“cie" + "\n");
 			}
 			else
 			{
@@ -32,9 +32,9 @@ public class zadanie3 {
 				Collections.sort(listaDat);
 				wypisz(listaDat, format);
 			}
-			if(listaDat.size() == 4)
+			if(listaDat.size()==4)
 			{
-				System.out.println("Lista jest ju¿ pe³na");
+				System.out.println("Lista jest juÂ¿ peÂ³na");
 				koniec = 2;
 			}
 			else
@@ -42,15 +42,16 @@ public class zadanie3 {
 				System.out.println("Wybierz:");
 				System.out.println("[1] - dalsze wpisywanie");
 				System.out.println("[2] - koniec");
-				System.out.print("twój wybór: ");
+				System.out.print("twÃ³j wybÃ³r: ");
 				koniec = scanner.nextInt();
 				System.out.println();
 			}
 		}
+		
 		scanner.close();
-		if(koniec == 2)
+		if(koniec==2)
 		{
-			System.out.println("Zakoñczono dzia³anie programu");
+			System.out.println("ZakoÃ±czono dziaÂ³anie programu");
 			Collections.sort(listaDat);
 			wypisz(listaDat, format);
 		}
@@ -58,7 +59,7 @@ public class zadanie3 {
 	
 	public static void wypisz(ArrayList<Date> listaDat, SimpleDateFormat format)
 	{
-		System.out.println("Daty na liœcie: ");
+		System.out.println("Daty na liÅ“cie: ");
 		listaDat.forEach(action -> System.out.println(format.format(action)));
 		System.out.println();
 	}
