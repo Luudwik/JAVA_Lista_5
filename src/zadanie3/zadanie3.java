@@ -47,9 +47,8 @@ public class zadanie3 {
 				System.out.println();
 			}
 		}
-		
 		scanner.close();
-		if(koniec==2)
+		if(koniec == 2)
 		{
 			System.out.println("Zakoñczono dzia³anie programu");
 			Collections.sort(listaDat);
