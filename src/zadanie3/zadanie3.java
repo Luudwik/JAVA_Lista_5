@@ -17,14 +17,14 @@ public class zadanie3 {
 		
 		while(koniec!=2)
 		{
-			System.out.print("Podaj datê: ");
+			System.out.print("Podaj date: ");
 			String input = scanner.next();
 			System.out.println();
 			Date data = format.parse(input);
 			
 			if(listaDat.contains(data))
 			{
-				System.out.println("Podana data jest ju¿ na liœcie" + "\n");
+				System.out.println("Podana data jest juz na liscie" + "\n");
 			}
 			else
 			{
@@ -34,7 +34,7 @@ public class zadanie3 {
 			}
 			if(listaDat.size()==4)
 			{
-				System.out.println("Lista jest ju¿ pe³na");
+				System.out.println("Lista jest juz pelna");
 				koniec = 2;
 			}
 			else
@@ -42,7 +42,7 @@ public class zadanie3 {
 				System.out.println("Wybierz:");
 				System.out.println("[1] - dalsze wpisywanie");
 				System.out.println("[2] - koniec");
-				System.out.print("twój wybór: ");
+				System.out.print("twoj wybor: ");
 				koniec = scanner.nextInt();
 				System.out.println();
 			}
@@ -50,7 +50,7 @@ public class zadanie3 {
 		scanner.close();
 		if(koniec == 2)
 		{
-			System.out.println("Zakoñczono dzia³anie programu");
+			System.out.println("Zakonczono dzialanie programu");
 			Collections.sort(listaDat);
 			wypisz(listaDat, format);
 		}
@@ -58,7 +58,7 @@ public class zadanie3 {
 	
 	public static void wypisz(ArrayList<Date> listaDat, SimpleDateFormat format)
 	{
-		System.out.println("Daty na liœcie: ");
+		System.out.println("Daty na liscie: ");
 		listaDat.forEach(action -> System.out.println(format.format(action)));
 		System.out.println();
 	}
